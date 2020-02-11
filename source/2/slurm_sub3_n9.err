@@ -1,0 +1,44 @@
+HDF5-DIAG: Error detected in HDF5 (1.10.2) thread 46912496374656:
+  #000: H5F.c line 445 in H5Fcreate(): unable to create file
+    major: File accessibilty
+    minor: Unable to open file
+  #001: H5Fint.c line 1519 in H5F_open(): unable to lock the file
+    major: File accessibilty
+    minor: Unable to open file
+  #002: H5FD.c line 1650 in H5FD_lock(): driver lock request failed
+    major: Virtual File Layer
+    minor: Can't update object
+  #003: H5FDsec2.c line 941 in H5FD_sec2_lock(): unable to lock file, errno = 11, error message = 'Resource temporarily unavailable'
+    major: File accessibilty
+    minor: Bad file ID accessed
+Traceback (most recent call last):
+  File "/umbc/xfs1/jianwu/common/anaconda3/lib/python3.7/site-packages/xarray/backends/file_manager.py", line 166, in acquire
+    file = self._cache[self._key]
+  File "/umbc/xfs1/jianwu/common/anaconda3/lib/python3.7/site-packages/xarray/backends/lru_cache.py", line 43, in __getitem__
+    value = self._cache[key]
+KeyError: [<function _open_netcdf4_group at 0x2aaac8b53730>, ('/home/savio1/jianwu_common/MODIS_Aggregation/savioexe/test/test3_CF.hdf', CombinedLock([<unlocked _thread.lock object at 0x2aab1425a418>, <SerializableLock: d9de0db1-c413-4c50-9153-46624901c9d2>, <SerializableLock: 65e0af33-dfbf-45be-8ba3-92c282c89b6f>])), 'a', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('group', None), ('persist', False))]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "Sub3_CF.py", line 62, in <module>
+    cf1.to_netcdf("/home/savio1/jianwu_common/MODIS_Aggregation/savioexe/test/test3_CF.hdf")
+  File "/umbc/xfs1/jianwu/common/anaconda3/lib/python3.7/site-packages/xarray/core/dataarray.py", line 1752, in to_netcdf
+    return dataset.to_netcdf(*args, **kwargs)
+  File "/umbc/xfs1/jianwu/common/anaconda3/lib/python3.7/site-packages/xarray/core/dataset.py", line 1232, in to_netcdf
+    compute=compute)
+  File "/umbc/xfs1/jianwu/common/anaconda3/lib/python3.7/site-packages/xarray/backends/api.py", line 732, in to_netcdf
+    store = store_open(target, mode, format, group, **kwargs)
+  File "/umbc/xfs1/jianwu/common/anaconda3/lib/python3.7/site-packages/xarray/backends/netCDF4_.py", line 355, in open
+    return cls(manager, lock=lock, autoclose=autoclose)
+  File "/umbc/xfs1/jianwu/common/anaconda3/lib/python3.7/site-packages/xarray/backends/netCDF4_.py", line 314, in __init__
+    self.format = self.ds.data_model
+  File "/umbc/xfs1/jianwu/common/anaconda3/lib/python3.7/site-packages/xarray/backends/netCDF4_.py", line 359, in ds
+    return self._manager.acquire().value
+  File "/umbc/xfs1/jianwu/common/anaconda3/lib/python3.7/site-packages/xarray/backends/file_manager.py", line 172, in acquire
+    file = self._opener(*self._args, **kwargs)
+  File "/umbc/xfs1/jianwu/common/anaconda3/lib/python3.7/site-packages/xarray/backends/netCDF4_.py", line 247, in _open_netcdf4_group
+    ds = nc4.Dataset(filename, mode=mode, **kwargs)
+  File "netCDF4/_netCDF4.pyx", line 2135, in netCDF4._netCDF4.Dataset.__init__
+  File "netCDF4/_netCDF4.pyx", line 1752, in netCDF4._netCDF4._ensure_nc_success
+PermissionError: [Errno 13] Permission denied: b'/home/savio1/jianwu_common/MODIS_Aggregation/savioexe/test/test3_CF.hdf'

@@ -1,0 +1,31 @@
+distributed.nanny - INFO -         Start Nanny at: 'tcp://10.2.1.14:46724'
+distributed.worker - INFO -       Start worker at:      tcp://10.2.1.14:40845
+distributed.worker - INFO -          Listening to:      tcp://10.2.1.14:40845
+distributed.worker - INFO -              nanny at:            10.2.1.14:46724
+distributed.worker - INFO -              bokeh at:            10.2.1.14:46405
+distributed.worker - INFO - Waiting to connect to:      tcp://10.2.1.14:36881
+distributed.worker - INFO - -------------------------------------------------
+distributed.worker - INFO -               Threads:                         16
+distributed.worker - INFO -                Memory:                   20.00 GB
+distributed.worker - INFO -       Local Directory: /umbc/xfs1/jianwu/common/MODIS_Aggregation/savioexe/test/8/worker-pbm59ffo
+distributed.worker - INFO - -------------------------------------------------
+distributed.nanny - ERROR - Failed to start worker
+Traceback (most recent call last):
+  File "/umbc/xfs1/jianwu/common/anaconda3/lib/python3.7/site-packages/distributed/nanny.py", line 543, in run
+    yield worker._start(*worker_start_args)
+  File "/umbc/xfs1/jianwu/common/anaconda3/lib/python3.7/site-packages/tornado/gen.py", line 1133, in run
+    value = future.result()
+  File "/umbc/xfs1/jianwu/common/anaconda3/lib/python3.7/site-packages/tornado/gen.py", line 1141, in run
+    yielded = self.gen.throw(*exc_info)
+  File "/umbc/xfs1/jianwu/common/anaconda3/lib/python3.7/site-packages/distributed/worker.py", line 817, in _start
+    yield self._register_with_scheduler()
+  File "/umbc/xfs1/jianwu/common/anaconda3/lib/python3.7/site-packages/tornado/gen.py", line 1133, in run
+    value = future.result()
+  File "/umbc/xfs1/jianwu/common/anaconda3/lib/python3.7/site-packages/tornado/gen.py", line 1147, in run
+    yielded = self.gen.send(value)
+  File "/umbc/xfs1/jianwu/common/anaconda3/lib/python3.7/site-packages/distributed/worker.py", line 601, in _register_with_scheduler
+    self.scheduler_delay = response['time'] - middle
+KeyError: 'time'
+distributed.nanny - INFO - Closing Nanny at 'tcp://10.2.1.14:46724'
+distributed.dask_worker - INFO - End worker
+slurmstepd: error: proctrack_p_wait: Unable to destroy container 173092 in cgroup plugin, giving up after 128 sec

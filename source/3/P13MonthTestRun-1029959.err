@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "P13Sub_CF_test.py", line 28, in <module>
+    d06 = xr.open_dataset(M06, parallel=True)['Cloud_Mask_1km'][:,:,:].values
+TypeError: open_dataset() got an unexpected keyword argument 'parallel'

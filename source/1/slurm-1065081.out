@@ -1,0 +1,16 @@
+distributed.nanny - INFO -         Start Nanny at: 'tcp://10.2.1.39:35274'
+distributed.worker - INFO -       Start worker at:      tcp://10.2.1.39:41370
+distributed.worker - INFO -          Listening to:      tcp://10.2.1.39:41370
+distributed.worker - INFO -              nanny at:            10.2.1.39:35274
+distributed.worker - INFO -              bokeh at:            10.2.1.39:33545
+distributed.worker - INFO - Waiting to connect to:       tcp://10.2.1.9:46866
+distributed.worker - INFO - -------------------------------------------------
+distributed.worker - INFO -               Threads:                         16
+distributed.worker - INFO -                Memory:                   20.00 GB
+distributed.worker - INFO -       Local Directory: /umbc/xfs1/jianwu/common/MODIS_Aggregation/savioexe/test/1/worker-lh7exefe
+distributed.worker - INFO - -------------------------------------------------
+distributed.worker - INFO -         Registered to:       tcp://10.2.1.9:46866
+distributed.worker - INFO - -------------------------------------------------
+distributed.core - INFO - Starting established connection
+slurmstepd: error: *** JOB 1065081 ON cnode039 CANCELLED AT 2019-07-01T22:44:07 ***
+slurmstepd: error: *** JOB 1065081 STEPD TERMINATED ON cnode039 AT 2019-07-01T23:04:37 DUE TO JOB NOT ENDING WITH SIGNALS ***

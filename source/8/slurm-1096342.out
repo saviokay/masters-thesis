@@ -1,0 +1,6 @@
+distributed.nanny - INFO -         Start Nanny at: 'tcp://10.2.1.36:38043'
+distributed.nanny - INFO - Closing Nanny at 'tcp://10.2.1.36:38043'
+distributed.nanny - WARNING - Worker process still alive after 47 seconds, killing
+distributed.dask_worker - INFO - End worker
+distributed.process - WARNING - reaping stray process <ForkServerProcess(ForkServerProcess-1, started daemon)>
+slurmstepd: error: proctrack_p_wait: Unable to destroy container 158238 in cgroup plugin, giving up after 128 sec

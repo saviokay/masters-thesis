@@ -1,0 +1,21 @@
+distributed.nanny - INFO -         Start Nanny at: 'tcp://10.2.1.128:41376'
+distributed.worker - INFO -       Start worker at:     tcp://10.2.1.128:42705
+distributed.worker - INFO -          Listening to:     tcp://10.2.1.128:42705
+distributed.worker - INFO -              nanny at:           10.2.1.128:41376
+distributed.worker - INFO -              bokeh at:           10.2.1.128:46143
+distributed.worker - INFO - Waiting to connect to:     tcp://10.2.1.103:35669
+distributed.worker - INFO - -------------------------------------------------
+distributed.worker - INFO -               Threads:                         16
+distributed.worker - INFO -                Memory:                   20.00 GB
+distributed.worker - INFO -       Local Directory: /umbc/xfs1/jianwu/common/MODIS_Aggregation/savioexe/test/4/worker-0qkq_q9t
+distributed.worker - INFO - -------------------------------------------------
+distributed.worker - INFO -         Registered to:     tcp://10.2.1.103:35669
+distributed.worker - INFO - -------------------------------------------------
+distributed.core - INFO - Starting established connection
+slurmstepd: error: *** JOB 1052575 ON cnode128 CANCELLED AT 2019-06-29T01:22:06 ***
+distributed.worker - INFO - Stopping worker at tcp://10.2.1.128:42705
+distributed.worker - INFO - Connection to scheduler broken.  Reconnecting...
+distributed.worker - INFO - -------------------------------------------------
+distributed.nanny - INFO - Closing Nanny at 'tcp://10.2.1.128:41376'
+distributed.dask_worker - INFO - End worker
+slurmstepd: error: proctrack_p_wait: Unable to destroy container 9512 in cgroup plugin, giving up after 128 sec
